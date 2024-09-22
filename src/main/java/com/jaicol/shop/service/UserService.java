@@ -12,13 +12,11 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public List<User> findAll() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public User save(User user) {
+    public User createUser(User user) {
         return userRepository.save(user);
     }
-
-    // Otros métodos según tus necesidades
 }

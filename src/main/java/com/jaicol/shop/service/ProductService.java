@@ -12,13 +12,11 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public List<Product> findAll() {
+    public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
 
-    public Product save(Product product) {
+    public Product createProduct(Product product) {
         return productRepository.save(product);
     }
-
-    // Otros métodos según tus necesidades
 }

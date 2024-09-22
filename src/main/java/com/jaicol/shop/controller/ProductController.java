@@ -15,13 +15,11 @@ public class ProductController {
 
     @GetMapping
     public List<Product> getAllProducts() {
-        return productService.findAll();
+        return productService.getAllProducts();
     }
 
     @PostMapping
     public Product createProduct(@RequestBody Product product) {
-        return productService.save(product);
+        return productService.createProduct(product);
     }
-
-    // Otros endpoints según tus necesidades
 }
